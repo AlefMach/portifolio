@@ -1,7 +1,8 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { useGLTF } from "@react-three/drei";
 import { useFrame, type ThreeElements } from "@react-three/fiber";
 import * as THREE from "three";
+import AirplaneBanner from "../../ui/AirplaneBanner";
 
 type AirplaneProps = ThreeElements["group"] & {
   startX: number;
@@ -12,13 +13,6 @@ type AirplaneProps = ThreeElements["group"] & {
 export default function Airplane({ startX, y, z, scale }: AirplaneProps) {
   const { scene } = useGLTF("/models/Airplane.glb");
   const ref = useRef<THREE.Group>(null);
-
-
-useEffect(() => {
-  scene.traverse((obj) => {
-    console.log(obj.name);
-  });
-}, [scene]);
 
   const [isAnimating, setIsAnimating] = useState(false);
   const clickTime = useRef(0);
@@ -66,16 +60,19 @@ useEffect(() => {
   });
 
   return (
-    <group
-      ref={ref}
-      position={[startX, y, z]}
-      scale={scale}
-      onClick={() => {
-        if (!isAnimating) setIsAnimating(true);
-      }}
-    >
-      <primitive object={scene.clone()} />
-      <axesHelper args={[5]} />
-    </group>
+    <>
+      <group
+        ref={ref}
+        position={[startX, y, z]}
+        scale={scale}
+        onClick={() => {
+          if (!isAnimating) setIsAnimating(true);
+        }}
+      >
+        <primitive object={scene.clone()} />
+      </group>
+
+      <AirplaneBanner position={[startX - 1, y, z]}>TESTE</AirplaneBanner>
+    </>
   );
 }
