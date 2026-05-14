@@ -27,7 +27,7 @@ export default function Airplane({ startX, y, z, scale, children }: AirplaneProp
     totalTime.current += delta;
     const t = totalTime.current;
 
-    // animação contínua (idle)
+    {/* animação contínua (idle) */}
     const idleFloat = Math.sin(t * 1.2) * 0.1;
     const idleTilt = Math.sin(t * 1.4) * 0.08;
     const idlePitch = Math.cos(t * 1.1) * 0.04;
@@ -36,7 +36,7 @@ export default function Airplane({ startX, y, z, scale, children }: AirplaneProp
     let extraPitch = 0;
     let extraLift = 0;
 
-    // animação do clique
+    {/* animação do clique */}
     if (isAnimating) {
       clickTime.current += delta * 2.5;
       const ct = clickTime.current;

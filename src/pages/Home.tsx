@@ -10,6 +10,7 @@ import {
   useTheme,
   useMediaQuery,
 } from "@mui/material";
+import Wind from "../components/ui/Wind";
 
 export default function Home() {
   const [isDark, setIsDark] = useState(false);
@@ -111,8 +112,30 @@ export default function Home() {
   );
 
   return (
-    <Box sx={{ width: "100%", height: "100%", position: "relative" }}>
+    <Box
+      sx={{
+        width: "100%",
+        height: "100%",
+        position: "relative",
+        overflow: "hidden",
+      }}
+    >
       {isDark && <StarsBackground />}
+
+      <Box
+        sx={{
+          position: "absolute",
+          inset: 0,
+          width: "100%",
+          height: "100%",
+          zIndex: 0,
+          pointerEvents: "none",
+        }}
+      >
+        <Scene cameraPosition={[0, 0, 8]} cameraFov={50}>
+          <Wind darkMode={isDark} />
+        </Scene>
+      </Box>
 
       <Box
         sx={{
@@ -120,6 +143,7 @@ export default function Home() {
           height: "50%",
           mt: "1.6rem",
           position: "relative",
+          zIndex: 2,
         }}
       >
         <Scene
@@ -137,6 +161,7 @@ export default function Home() {
           width: "100%",
           height: "50%",
           marginTop: "-5%",
+          zIndex: 2,
         }}
       >
         <Scene
