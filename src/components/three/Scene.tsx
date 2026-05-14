@@ -1,16 +1,22 @@
 import { Canvas } from "@react-three/fiber";
-import type { ReactNode } from "react";
-import Lights from "./Lights";
 import Camera from "./Camera";
+import Lights from "./Lights";
+import type { ReactNode } from "react";
 
 type SceneProps = {
   children: ReactNode;
+  cameraPosition?: [number, number, number];
+  cameraFov?: number;
 };
 
-export default function Scene({ children }: SceneProps) {
+export default function Scene({
+  children,
+  cameraPosition,
+  cameraFov,
+}: SceneProps) {
   return (
     <Canvas>
-      <Camera />
+      <Camera position={cameraPosition} fov={cameraFov} />
       <Lights />
       {children}
     </Canvas>

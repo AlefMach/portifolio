@@ -17,7 +17,7 @@ export default function Home() {
           marginTop: "1.6rem",
         }}
       >
-        <Scene>
+        <Scene cameraPosition={[0, 0, 3.6]} cameraFov={30}>
           <Cloud startX={4.4} y={0} z={0} scale={4} speed={0.4} />
           <Cloud startX={6.7} y={0} z={0} scale={4} speed={0.2} />
           <Cloud startX={10.9} y={0} z={0} scale={4} speed={0.5} />
