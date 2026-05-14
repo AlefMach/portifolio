@@ -18,7 +18,7 @@ export default function AirplaneBanner({ children, ...props }: BannerProps) {
     const t = time.current;
 
     ref.current.rotation.z = Math.sin(t * 2) * 0.03;
-    ref.current.position.y = Math.sin(t * 1.5) * 0.03;
+    ref.current.position.y = 0.5 + Math.sin(t * 1.5) * 0.03;
   });
 
   return (

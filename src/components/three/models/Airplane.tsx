@@ -64,15 +64,15 @@ export default function Airplane({ startX, y, z, scale }: AirplaneProps) {
       <group
         ref={ref}
         position={[startX, y, z]}
-        scale={scale}
         onClick={() => {
           if (!isAnimating) setIsAnimating(true);
         }}
       >
-        <primitive object={scene.clone()} />
+        <primitive scale={scale} object={scene.clone()} />
+        <AirplaneBanner position={[0.8, 1, 0]} rotation={[0, Math.PI, 0]}>
+          TESTE
+        </AirplaneBanner>
       </group>
-
-      <AirplaneBanner position={[startX - 1, y, z]}>TESTE</AirplaneBanner>
     </>
   );
 }
