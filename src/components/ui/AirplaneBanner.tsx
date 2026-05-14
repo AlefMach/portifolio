@@ -1,51 +1,79 @@
-import { Text } from "@react-three/drei";
+import { Html } from "@react-three/drei";
 import { useFrame, type ThreeElements } from "@react-three/fiber";
-import { useRef } from "react";
+import { useMemo, useRef, type ReactNode } from "react";
 import * as THREE from "three";
 
 type BannerProps = ThreeElements["group"] & {
-  children: string;
+  children: ReactNode;
 };
 
 export default function AirplaneBanner({ children, ...props }: BannerProps) {
-  const ref = useRef<THREE.Group>(null);
+  const groupRef = useRef<THREE.Group>(null);
+  const flagRef = useRef<THREE.Mesh>(null);
   const time = useRef(0);
 
-  useFrame((_, delta) => {
-    if (!ref.current) return;
+  const flagGeometry = useMemo(() => {
+    return new THREE.PlaneGeometry(3.8, 2.5, 30, 10);
+  }, []);
 
+  useFrame((_, delta) => {
     time.current += delta;
     const t = time.current;
 
-    ref.current.rotation.z = Math.sin(t * 2) * 0.03;
-    ref.current.position.y = 0.5 + Math.sin(t * 1.5) * 0.03;
+    if (groupRef.current) {
+      groupRef.current.rotation.z = Math.sin(t * 1.8) * 0.02;
+      groupRef.current.position.y = 0.5 + Math.sin(t * 1.5) * 0.03;
+    }
+
+    if (flagRef.current) {
+      const pos = flagRef.current.geometry.attributes.position;
+      const arr = pos.array as Float32Array;
+
+      for (let i = 0; i < arr.length; i += 3) {
+        const x = arr[i];
+        arr[i + 2] = Math.sin(x * 2.5 + t * 4) * 0.08;
+      }
+
+      pos.needsUpdate = true;
+    }
   });
 
   return (
-    <group ref={ref} {...props}>
-      {/* cabo atrás do avião */}
-      <mesh position={[-1.1, 0, 0]}>
-        <boxGeometry args={[1.2, 0.02, 0.02]} />
-        <meshStandardMaterial color="#666" />
+    <group ref={groupRef} {...props}>
+      {/* cabo */}
+      <mesh position={[-1.1, 0, 0]} rotation={[0, 0, Math.PI / 2]}>
+        <cylinderGeometry args={[0.01, 0.01, 1.2, 8]} />
+        <meshStandardMaterial color="#777" />
       </mesh>
 
       {/* bandeira */}
-      <mesh position={[-2.8, 0, 0]}>
-        <planeGeometry args={[3.2, 0.9]} />
-        <meshStandardMaterial color="white" side={THREE.DoubleSide} />
+      <mesh ref={flagRef} geometry={flagGeometry} position={[-2.8, 0, 0]}>
+        <meshStandardMaterial color="#e9fff7" side={THREE.DoubleSide} />
       </mesh>
 
-      {/* texto */}
-      <Text
-        position={[-2.8, 0, 0.02]}
-        fontSize={0.22}
-        color="black"
-        anchorX="center"
-        anchorY="middle"
-        maxWidth={2.7}
+      <Html
+        transform
+        position={[-2.8, 0, 0.08]}
+        distanceFactor={4.2}
+        center
+        style={{
+          width: "320px",
+          pointerEvents: "auto",
+        }}
       >
-        {children}
-      </Text>
+        <div
+          style={{
+            width: "100%",
+            padding: "20px 24px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            textAlign: "center",
+          }}
+        >
+          {children}
+        </div>
+      </Html>
     </group>
   );
 }

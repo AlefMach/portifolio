@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, type ReactNode } from "react";
 import { useGLTF } from "@react-three/drei";
 import { useFrame, type ThreeElements } from "@react-three/fiber";
 import * as THREE from "three";
@@ -8,9 +8,10 @@ type AirplaneProps = ThreeElements["group"] & {
   startX: number;
   y: number;
   z: number;
+  children: ReactNode;
 };
 
-export default function Airplane({ startX, y, z, scale }: AirplaneProps) {
+export default function Airplane({ startX, y, z, scale, children }: AirplaneProps) {
   const { scene } = useGLTF("/models/Airplane.glb");
   const ref = useRef<THREE.Group>(null);
 
@@ -70,7 +71,7 @@ export default function Airplane({ startX, y, z, scale }: AirplaneProps) {
       >
         <primitive scale={scale} object={scene.clone()} />
         <AirplaneBanner position={[0.8, 1, 0]} rotation={[0, Math.PI, 0]}>
-          TESTE
+          {children}
         </AirplaneBanner>
       </group>
     </>
