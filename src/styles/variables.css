@@ -1,0 +1,11 @@
+:root {
+    --bg: #abd9f1;
+    --text: #111111;
+    --accent: #2563eb;
+    --scene-bg: #e5e7eb;
+
+    --gradient-main: linear-gradient(135deg,
+                rgba(255, 255, 255, 0.95) 0%,
+                rgba(171, 217, 241, 0.9) 10%,
+                rgba(66, 133, 244, 1) 100%);
+}
