@@ -57,7 +57,7 @@ export default function AirplaneBanner({ children, ...props }: BannerProps) {
         distanceFactor={4.2}
         center
         style={{
-          width: "320px",
+          width: "clamp(180px, 70vw, 320px)",
           pointerEvents: "auto",
         }}
       >

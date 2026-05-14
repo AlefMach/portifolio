@@ -3,10 +3,19 @@ import Cloud from "../components/three/models/Cloud";
 import Airplane from "../components/three/models/Airplane";
 import Scene from "../components/three/Scene";
 import StarsBackground from "../components/ui/StarsBackground";
-import { Box, Button, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Typography,
+  useTheme,
+  useMediaQuery,
+} from "@mui/material";
 
 export default function Home() {
   const [isDark, setIsDark] = useState(false);
+
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   useEffect(() => {
     const updateTheme = () => {
@@ -42,14 +51,14 @@ export default function Home() {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        gap: 1.5,
-        color: "#111", // cor padrão fixa
+        gap: { xs: 0.5, sm: 1.5 },
+        color: "#111"
       }}
     >
       <Typography
         sx={{
-          fontSize: "0.9rem",
-          letterSpacing: "0.35em",
+          fontSize: { xs: "1rem", sm: "0.9rem" },
+          letterSpacing: "0.25em",
           fontWeight: 500,
           color: "#444",
         }}
@@ -59,7 +68,7 @@ export default function Home() {
 
       <Typography
         sx={{
-          fontSize: "4rem",
+          fontSize: { xs: "2.2rem", sm: "4rem" },
           fontWeight: 800,
           lineHeight: 1,
           color: "#000",
@@ -70,7 +79,7 @@ export default function Home() {
 
       <Typography
         sx={{
-          fontSize: "1.2rem",
+          fontSize: { xs: "1rem", sm: "1.2rem" },
           color: "#666",
         }}
       >
@@ -82,8 +91,9 @@ export default function Home() {
         sx={{
           mt: 1,
           borderRadius: "999px",
-          px: 4,
-          py: 1.2,
+          px: { xs: 2.5, sm: 4 },
+          py: { xs: 0.8, sm: 1.2 },
+          fontSize: { xs: "0.75rem", sm: "1rem" },
           backgroundColor: "#000",
           color: "#fff",
           textTransform: "none",
@@ -112,7 +122,10 @@ export default function Home() {
           position: "relative",
         }}
       >
-        <Scene cameraPosition={[0, 0, 3.6]} cameraFov={30}>
+        <Scene
+          cameraPosition={isMobile ? [0, 0, 5.5] : [0, 0, 3.6]}
+          cameraFov={isMobile ? 40 : 30}
+        >
           {clouds.map((cloud, index) => (
             <Cloud key={index} y={0} z={0} scale={4.2} {...cloud} />
           ))}
@@ -126,8 +139,11 @@ export default function Home() {
           marginTop: "-5%",
         }}
       >
-        <Scene cameraPosition={[0, 1, 6]} cameraFov={35}>
-          <Airplane startX={0} y={0} z={0} scale={0.01}>
+        <Scene
+          cameraPosition={isMobile ? [-2.5, 1, 8] : [0, 1, 6]}
+          cameraFov={isMobile ? 45 : 35}
+        >
+          <Airplane startX={0} y={0} z={0} scale={isMobile ? 0.007 : 0.01}>
             {banner}
           </Airplane>
         </Scene>
