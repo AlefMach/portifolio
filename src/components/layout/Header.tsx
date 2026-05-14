@@ -8,11 +8,10 @@ export default function Header() {
 
   return (
     <AppBar
-      position="static"
+      position="absolute"
       elevation={0}
       sx={{
-        background: "transparent",
-        backdropFilter: "blur(8px)"
+        background: "transparent"
       }}
     >
       <Toolbar>
