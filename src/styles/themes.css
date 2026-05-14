@@ -1,21 +1,25 @@
 [data-theme="light"] {
-    --bg: #abd9f1;
-    --text: #0f172a;
-    --accent: #2563eb;
+  --bg: #abd9f1;
+  --text: #0f172a;
+  --accent: #abd9f1;
 
-    --gradient-main: linear-gradient(135deg,
-            rgba(255, 255, 255, 0.95) 0%,
-            rgba(171, 217, 241, 0.9) 10%,
-            rgba(66, 133, 244, 1) 100%);
+  --gradient-main: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(171, 217, 241, 0.9) 10%,
+    rgb(182, 210, 255) 100%
+  );
 }
 
 [data-theme="dark"] {
-    --bg: #102632;
-    --text: #f8fafc;
-    --accent: #60a5fa;
+  --bg: #102632;
+  --text: #f8fafc;
+  --accent: #60a5fa;
 
-    --gradient-main: linear-gradient(135deg,
-            rgba(255, 255, 255, 0.18) 0%,
-            rgba(16, 38, 50, 0.9) 20%,
-            rgba(5, 20, 45, 1) 100%);
+  --gradient-main: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.18) 0%,
+    rgba(16, 38, 50, 0.9) 20%,
+    rgba(5, 20, 45, 1) 100%
+  );
 }
