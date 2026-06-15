@@ -22,6 +22,27 @@
     "projectsDescription": "Projetos que conectam produto, engenharia e operação: plataformas web, integrações, automações, mensageria e sistemas preparados para escala.",
     "projectCards": [
       {
+        "title": "Automação de Triagem e MR com n8n, IA e Slack",
+        "description": "Fluxo de automação criado para classificar cards helpers, direcionar demandas para o time correto e apoiar a criação automática de merge requests conforme chegavam tarefas do tipo fix ou refactor.",
+        "image": "/portifolio/images/projects/n8n.png",
+        "alt": "Workflow de automação com n8n, IA e Slack",
+        "problemLabel": "Problema",
+        "problem": "Demandas helpers chegavam de forma contínua e exigiam triagem manual, comunicação no Slack e criação repetitiva de MRs para ajustes do tipo fix/refactor.",
+        "solutionLabel": "Solução",
+        "solution": "Criei fluxos com n8n integrando IA, Slack e repositório para classificar cards, identificar o tipo de demanda, notificar o time correto e iniciar a criação de MR automaticamente quando aplicável.",
+        "impactLabel": "Impacto",
+        "impact": "Redução de trabalho manual, melhoria no tempo de resposta, menor chance de erro na triagem e mais fluidez entre demanda, comunicação e entrega.",
+        "tags": [
+          "n8n",
+          "IA",
+          "Slack",
+          "Automação",
+          "Git",
+          "Merge Requests",
+          "Workflow Automation"
+        ]
+      },
+      {
         "title": "Think Cloud",
         "description": "Plataforma para comparar custos cloud e apoiar decisões de FinOps. A solução organiza benchmarks e indicadores em dashboards, dando mais clareza para análises técnicas e comerciais.",
         "link": "https://www.grupothink.com.br/solucoes/think-cloud/",
@@ -31,42 +52,62 @@
         "button": "Ver site"
       },
       {
-        "title": "Sistema de Notificações • Swap",
-        "description": "Sistema de mensageria para lidar com alto volume de eventos e notificações. A arquitetura priorizou resiliência, processamento assíncrono e observabilidade para sustentar mais de 150 mil requisições por minuto.",
-        "link": "https://beneficios.swap.financial/?utm_source=google&utm_medium=cpc&utm_campaign=bigh_swap_trafego&utm_term=swap&utm_campaign=%5BBIGH%5D+%5BTR%C3%81FEGO%5D+%5BBENEF%C3%8DCIOS%5D&utm_source=adwords&utm_medium=ppc&hsa_acc=4062785619&hsa_cam=23727201969&hsa_grp=198716974961&hsa_ad=804190000995&hsa_src=g&hsa_tgt=kwd-12161512&hsa_kw=swap&hsa_mt=b&hsa_net=adwords&hsa_ver=3&gad_source=1&gad_campaignid=23727201969&gbraid=0AAAAABb-cK8vevSJ6JjylnFvMXmyyBqGO&gclid=Cj0KCQjwornRBhCrARIsAON5exEAQ4n4W3R-uLeoUUQJ24k6AJ34_L6oBHlRIn_f1jc7kRWMwgHCJwkaAtwFEALw_wcB",
+        "title": "Webhooks e Notificações • Swap",
+        "description": "Sistema de mensageria para alto volume de webhooks e notificações. O trabalho deu visibilidade ao fluxo real de mensagens por quantidade, URL e realm, expondo gargalos que antes ficavam invisíveis na aplicação.",
+        "link": "https://medium.com/@alef_mac/3-horas-para-descobrir-que-nossos-workers-oban-n%C3%A3o-tinham-prioridade-nenhuma-5dd8e324d760",
         "image": "/portifolio/images/projects/notifications.png",
         "alt": "Monitoramento do sistema de notificações",
-        "tags": ["Elixir", "Escalabilidade", "Mensageria"],
-        "button": "Ver site"
+        "problemLabel": "Problema",
+        "problem": "O sistema processava um volume alto de mensagens, mas a operação não tinha clareza sobre quais URLs, realms e filas concentravam carga, nem sobre como a prioridade dos workers Oban afetava o processamento.",
+        "solutionLabel": "Solução",
+        "solution": "Instrumentei telemetria para contar mensagens por URL, realm e fluxo da aplicação, conectando métricas operacionais ao comportamento dos workers e tornando visível onde a fila realmente acumulava.",
+        "impactLabel": "Impacto",
+        "impact": "O diagnóstico saiu do campo da intuição: ficou possível identificar gargalos, ajustar prioridades de processamento e explicar o incidente em um artigo técnico com o caminho de investigação e correção.",
+        "tags": [
+          "Elixir",
+          "Oban",
+          "Telemetry",
+          "Webhooks",
+          "Observabilidade",
+          "Mensageria"
+        ],
+        "button": "Ler artigo"
       },
       {
         "title": "Bots Conversacionais • Alertrack",
-        "description": "Automação de atendimento e comunicação em tempo real via WhatsApp. Os fluxos conectam mensagens, regras de negócio e integrações para reduzir etapas manuais e acelerar respostas operacionais.",
+        "description": "Plataforma de bots conversacionais para atendimento e comunicação em tempo real via WhatsApp, conectando mensagens, regras de negócio, webhooks e automações externas.",
         "link": "https://alertrack.com.br/",
         "image": "/portifolio/images/projects/bots.webp",
         "alt": "Fluxo de conversação com bots",
-        "tags": ["Whatsapp", "Realtime", "Bots"],
-        "button": "Ver site"
-      },
-      {
-        "title": "Integrações com n8n",
-        "description": "Fluxos n8n para automatizar processos internos, conectar APIs, enviar alertas no Slack e classificar demandas com apoio de IA. O objetivo é reduzir retrabalho e dar mais previsibilidade à operação.",
-        "link": "https://n8n.io/",
-        "image": "/portifolio/images/projects/n8n.png",
-        "alt": "Exemplo de integração com n8n",
-        "tags": ["n8n", "Automação", "Integração"],
+        "problemLabel": "Desafio",
+        "problem": "Dar suporte a mais de 15 mil usuários ativos enviando mensagens simultaneamente, sem transformar o processamento de conversas e integrações em gargalo operacional.",
+        "solutionLabel": "Solução",
+        "solution": "Usei Elixir pela concorrência baseada em processos leves, modelando o recebimento via webhooks e cache pesado para manter o sistema responsivo sob carga.",
+        "impactLabel": "Resultado",
+        "impact": "A arquitetura absorveu alto volume de mensagens em tempo real, reduziu etapas manuais no atendimento e permitiu evoluir automações sem comprometer a estabilidade da operação.",
+        "tags": ["Elixir", "Whatsapp", "Webhooks", "n8n", "Realtime", "Bots"],
         "button": "Ver site"
       }
     ],
     "buildTitle": "Como eu construo software",
     "buildDescription": "Princípios que uso para tomar decisões técnicas com foco em produto, manutenção e evolução do sistema.",
     "buildPrinciples": [
-      "Monolith First",
-      "Microservices quando necessários",
-      "Observabilidade desde o início",
-      "Automação antes de trabalho manual",
-      "Simplicidade antes de complexidade",
-      "IA aplicada para resolver problemas reais"
+      {
+        "title": "Monolith First",
+        "description": "Começo simples e coeso. Microsserviços só entram quando existe uma necessidade real de escala, autonomia de times ou complexidade operacional."
+      },
+      {
+        "title": "Observabilidade desde o início",
+        "description": "Logs, métricas e tracing fazem parte da solução. Gosto de construir sistemas que possam ser entendidos, monitorados e evoluídos com segurança."
+      },
+      {
+        "title": "Automação antes de trabalho manual",
+        "description": "Busco automatizar fluxos repetitivos para reduzir atrito operacional, evitar erros manuais e liberar tempo para decisões mais importantes."
+      },
+      {
+        "title": "IA aplicada a problemas reais",
+        "description": "Vejo IA como ferramenta prática para aumentar eficiência, classificar informações, apoiar decisões e criar experiências mais inteligentes."
+      }
     ],
     "stackTitle": "Stack",
     "stackDescription": "Tecnologias que uso com foco em construção de produtos, integrações, automações e sistemas observáveis.",
@@ -99,14 +140,13 @@
     "exploringTitle": "Explorando atualmente",
     "exploringDescription": "Temas que venho estudando e aplicando para criar produtos mais inteligentes, integrados e fáceis de operar.",
     "exploringItems": [
-      "IA aplicada a produtos",
-      "Agentes e automações",
-      "n8n",
+      "IA aplicada",
+      "n8n e automações",
       "Observabilidade",
       "OpenTelemetry",
-      "Arquitetura de sistemas",
       "Monolith First",
-      "Event-driven Architecture",
+      "Arquitetura de sistemas",
+      "Event-driven architecture",
       "LLMs e RAG"
     ],
     "contactTitle": "Vamos conversar",

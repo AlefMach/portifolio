@@ -13,6 +13,11 @@ import { motion, useReducedMotion } from "framer-motion";
 import { useTranslation } from "../../../hooks/useTranslation";
 import { SectionHeading } from "../SectionHeading";
 
+type ProjectCaseField = {
+  label?: string;
+  text?: string;
+};
+
 const sectionVariants: Variants = {
   hidden: {
     opacity: 0,
@@ -20,7 +25,7 @@ const sectionVariants: Variants = {
   visible: {
     opacity: 1,
     transition: {
-      duration: 0.60,
+      duration: 0.6,
       ease: "easeOut",
       when: "beforeChildren",
       staggerChildren: 0.08,
@@ -124,6 +129,32 @@ export function Projects() {
                   const buttonLabel =
                     "button" in project ? project.button : undefined;
                   const projectKey = `${project.image}-${index}`;
+                  const caseFields: ProjectCaseField[] = [
+                    {
+                      label:
+                        "problemLabel" in project
+                          ? project.problemLabel
+                          : undefined,
+                      text: "problem" in project ? project.problem : undefined,
+                    },
+                    {
+                      label:
+                        "solutionLabel" in project
+                          ? project.solutionLabel
+                          : undefined,
+                      text:
+                        "solution" in project ? project.solution : undefined,
+                    },
+                    {
+                      label:
+                        "impactLabel" in project
+                          ? project.impactLabel
+                          : undefined,
+                      text: "impact" in project ? project.impact : undefined,
+                    },
+                  ].filter((field): field is Required<ProjectCaseField> =>
+                    Boolean(field.label && field.text),
+                  );
 
                   return (
                     <motion.div
@@ -223,7 +254,7 @@ export function Projects() {
                               display: "flex",
                               flexWrap: "wrap",
                               gap: 1,
-                              mt: "auto",
+                              mt: caseFields.length > 0 ? 0 : "auto",
                             }}
                           >
                             {project.tags.map((tag) => (
@@ -246,6 +277,37 @@ export function Projects() {
                               </Box>
                             ))}
                           </Box>
+
+                          {caseFields.length > 0 && (
+                            <Stack spacing={1.5} sx={{ mt: "auto" }}>
+                              {caseFields.map((field) => (
+                                <Box key={field.label}>
+                                  <Typography
+                                    component="h4"
+                                    sx={{
+                                      color: "text.primary",
+                                      fontSize: "0.8rem",
+                                      fontWeight: 800,
+                                      lineHeight: 1.4,
+                                      mb: 0.5,
+                                    }}
+                                  >
+                                    {field.label}
+                                  </Typography>
+
+                                  <Typography
+                                    sx={{
+                                      color: "text.secondary",
+                                      fontSize: "0.9rem",
+                                      lineHeight: 1.65,
+                                    }}
+                                  >
+                                    {field.text}
+                                  </Typography>
+                                </Box>
+                              ))}
+                            </Stack>
+                          )}
 
                           {hasLink && buttonLabel && (
                             <Link
