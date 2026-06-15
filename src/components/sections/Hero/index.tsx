@@ -48,7 +48,7 @@ export function Hero() {
     const isEmpty = displayedSkill.length === 0;
 
     const timeBeforeStartWriting = 1800;
-    const timeBeforeTheNextSkill = 2000;
+    const timeBeforeTheNextSkill = 350;
 
     const delay =
       isComplete && !isDeleting
