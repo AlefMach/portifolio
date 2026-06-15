@@ -7,16 +7,19 @@ import {
   Typography,
 } from "@mui/material";
 
+import { useTranslation } from "../../../hooks/useTranslation";
 import { darkPalette, lightPalette } from "../../../theme/palette";
+import { LanguageToggle } from "../../common/LanguageToggle";
 import { ThemeToggle } from "../../common/ThemeToggle";
 
-const navItems = [
-  { label: "Início", href: "#inicio" },
-  { label: "Projetos", href: "#projetos" },
-  { label: "Contato", href: "#contato" },
-];
-
 export default function Navbar() {
+  const { t } = useTranslation();
+  const navItems = [
+    { label: t.nav.home, href: "#inicio" },
+    { label: t.nav.projects, href: "#projetos" },
+    { label: t.nav.contact, href: "#contato" },
+  ];
+
   return (
     <AppBar
       position="sticky"
@@ -52,7 +55,7 @@ export default function Navbar() {
             whiteSpace: "nowrap",
           }}
         >
-          Meu Portfólio
+          {t.nav.brand}
         </Typography>
 
         <Box sx={{ flexGrow: 1 }} />
@@ -85,6 +88,7 @@ export default function Navbar() {
           ))}
         </Box>
 
+        <LanguageToggle />
         <ThemeToggle />
       </Toolbar>
     </AppBar>

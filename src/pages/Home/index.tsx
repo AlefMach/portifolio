@@ -1,3 +1,7 @@
+import { useTranslation } from "../../hooks/useTranslation";
+
 export default function Home() {
-  return <div>Home</div>;
+  const { t } = useTranslation();
+
+  return <div>{t.home.title}</div>;
 }

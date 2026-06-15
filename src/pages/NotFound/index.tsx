@@ -1,3 +1,7 @@
+import { useTranslation } from "../../hooks/useTranslation";
+
 export default function NotFound() {
-  return <div>404</div>;
+  const { t } = useTranslation();
+
+  return <div>{t.notFound.title}</div>;
 }

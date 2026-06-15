@@ -1,0 +1,29 @@
+{
+  "common": {
+    "language": "Idioma",
+    "portuguese": "Português",
+    "english": "Inglês"
+  },
+  "nav": {
+    "brand": "Meu Portfólio",
+    "home": "Início",
+    "projects": "Projetos",
+    "contact": "Contato"
+  },
+  "theme": {
+    "activateDark": "Ativar tema escuro",
+    "activateLight": "Ativar tema claro"
+  },
+  "home": {
+    "title": "Home"
+  },
+  "hero": {
+    "title": "Hero"
+  },
+  "footer": {
+    "title": "Footer"
+  },
+  "notFound": {
+    "title": "404"
+  }
+}

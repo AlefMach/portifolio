@@ -1,3 +1,7 @@
+import { useTranslation } from "../../../hooks/useTranslation";
+
 export function Hero() {
-  return <section>Hero</section>;
+  const { t } = useTranslation();
+
+  return <section>{t.hero.title}</section>;
 }

@@ -4,15 +4,19 @@ import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
 
 import { useThemeMode } from "../../../hooks/useThemeMode";
+import { useTranslation } from "../../../hooks/useTranslation";
 
 export function ThemeToggle() {
   const { mode, toggleTheme } = useThemeMode();
+  const { t } = useTranslation();
   const nextMode = mode === "dark" ? "light" : "dark";
+  const label =
+    nextMode === "dark" ? t.theme.activateDark : t.theme.activateLight;
 
   return (
-    <Tooltip title={`Ativar tema ${nextMode === "dark" ? "escuro" : "claro"}`}>
+    <Tooltip title={label}>
       <IconButton
-        aria-label={`Ativar tema ${nextMode === "dark" ? "escuro" : "claro"}`}
+        aria-label={label}
         onClick={toggleTheme}
         sx={{
           border: 1,

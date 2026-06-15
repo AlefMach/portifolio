@@ -1,3 +1,7 @@
+import { useTranslation } from "../../../hooks/useTranslation";
+
 export function Footer() {
-  return <footer>Footer</footer>;
+  const { t } = useTranslation();
+
+  return <footer>{t.footer.title}</footer>;
 }
