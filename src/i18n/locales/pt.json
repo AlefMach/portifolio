@@ -17,19 +17,43 @@
   "home": {
     "title": "Home",
     "projectsTitle": "Projetos em destaque",
-    "projectsDescription": "Uma seleção inicial preparada para crescer com seus melhores trabalhos, mantendo leitura confortável em desktop, tablet e mobile.",
+    "projectsDescription": "Projetos que conectam produto, engenharia e experiência do usuário, de plataformas web e integrações até sistemas distribuídos com alto volume de processamento e automações em tempo real.",
     "projectCards": [
       {
-        "title": "Aplicação web",
-        "description": "Interface responsiva com componentes reutilizáveis e atenção a estados de uso reais."
+        "title": "Think Cloud",
+        "description": "Plataforma para benchmark e análise comparativa de custos cloud.",
+        "link": "https://www.grupothink.com.br/solucoes/think-cloud/",
+        "image": "/portifolio/images/projects/think-cloud.jpg",
+        "alt": "Dashboard do Think Cloud",
+        "tags": ["Cloud", "Dashboard", "FinOps"],
+        "button": "Ver site"
       },
       {
-        "title": "Design system",
-        "description": "Base visual consistente para tipografia, espaçamento, cores e navegação."
+        "title": "Sistema de Notificações • Swap",
+        "description": "Sistema responsável por mais de 150 mil requisições por minuto.",
+        "link": "https://beneficios.swap.financial/?utm_source=google&utm_medium=cpc&utm_campaign=bigh_swap_trafego&utm_term=swap&utm_campaign=%5BBIGH%5D+%5BTR%C3%81FEGO%5D+%5BBENEF%C3%8DCIOS%5D&utm_source=adwords&utm_medium=ppc&hsa_acc=4062785619&hsa_cam=23727201969&hsa_grp=198716974961&hsa_ad=804190000995&hsa_src=g&hsa_tgt=kwd-12161512&hsa_kw=swap&hsa_mt=b&hsa_net=adwords&hsa_ver=3&gad_source=1&gad_campaignid=23727201969&gbraid=0AAAAABb-cK8vevSJ6JjylnFvMXmyyBqGO&gclid=Cj0KCQjwornRBhCrARIsAON5exEAQ4n4W3R-uLeoUUQJ24k6AJ34_L6oBHlRIn_f1jc7kRWMwgHCJwkaAtwFEALw_wcB",
+        "image": "/portifolio/images/projects/notifications.png",
+        "alt": "Monitoramento do sistema de notificações",
+        "tags": ["Elixir", "Escalabilidade", "Mensageria"],
+        "button": "Ver site"
       },
       {
-        "title": "Integrações",
-        "description": "Experiências conectadas a APIs, dados e fluxos de produto."
+        "title": "Bots Conversacionais • Alertrack",
+        "description": "Mensagens em tempo real e automações para Whatsapp.",
+        "link": "https://alertrack.com.br/",
+        "image": "/portifolio/images/projects/bots.webp",
+        "alt": "Fluxo de conversação com bots",
+        "tags": ["Whatsapp", "Realtime", "Bots"],
+        "button": "Ver site"
+      },
+      {
+        "title": "Integrações com n8n",
+        "description": "Construção de integrações e automações conectando APIs, fluxos internos e processos operacionais entre diferentes plataformas.",
+        "link": "https://n8n.io/",
+        "image": "/portifolio/images/projects/n8n.png",
+        "alt": "Exemplo de integração com n8n",
+        "tags": ["n8n", "Automação", "Integração"],
+        "button": "Ver site"
       }
     ],
     "contactTitle": "Vamos conversar",

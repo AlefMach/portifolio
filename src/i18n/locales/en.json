@@ -17,19 +17,43 @@
   "home": {
     "title": "Home",
     "projectsTitle": "Featured projects",
-    "projectsDescription": "A starter selection ready to grow with your best work while staying readable across desktop, tablet, and mobile.",
+    "projectsDescription": "Projects that connect product, engineering and user experience, from web platforms and integrations to distributed systems with high processing volume and real-time automations.",
     "projectCards": [
       {
-        "title": "Web application",
-        "description": "Responsive interface with reusable components and attention to real usage states."
+        "title": "Think Cloud",
+        "description": "Platform for benchmarking and comparative analysis of cloud costs.",
+        "link": "https://www.grupothink.com.br/solucoes/think-cloud/",
+        "image": "/portifolio/images/projects/think-cloud.jpg",
+        "alt": "Think Cloud dashboard",
+        "tags": ["Cloud", "Dashboard", "FinOps"],
+        "button": "View site"
       },
       {
-        "title": "Design system",
-        "description": "Consistent visual foundation for typography, spacing, colors, and navigation."
+        "title": "Notification System • Swap",
+        "description": "System responsible for more than 150 thousand requests per minute.",
+        "link": "https://beneficios.swap.financial/?utm_source=google&utm_medium=cpc&utm_campaign=bigh_swap_trafego&utm_term=swap&utm_campaign=%5BBIGH%5D+%5BTR%C3%81FEGO%5D+%5BBENEF%C3%8DCIOS%5D&utm_source=adwords&utm_medium=ppc&hsa_acc=4062785619&hsa_cam=23727201969&hsa_grp=198716974961&hsa_ad=804190000995&hsa_src=g&hsa_tgt=kwd-12161512&hsa_kw=swap&hsa_mt=b&hsa_net=adwords&hsa_ver=3&gad_source=1&gad_campaignid=23727201969&gbraid=0AAAAABb-cK8vevSJ6JjylnFvMXmyyBqGO&gclid=Cj0KCQjwornRBhCrARIsAON5exEAQ4n4W3R-uLeoUUQJ24k6AJ34_L6oBHlRIn_f1jc7kRWMwgHCJwkaAtwFEALw_wcB",
+        "image": "/portifolio/images/projects/notifications.png",
+        "alt": "Notification system monitoring",
+        "tags": ["Elixir", "Scalability", "Messaging"],
+        "button": "View site"
       },
       {
-        "title": "Integrations",
-        "description": "Experiences connected to APIs, data, and product workflows."
+        "title": "Conversational Bots • Alertrack",
+        "description": "Real-time messages and automations for Whatsapp.",
+        "link": "https://alertrack.com.br/",
+        "image": "/portifolio/images/projects/bots.webp",
+        "alt": "Conversation flow with bots",
+        "tags": ["Whatsapp", "Realtime", "Bots"],
+        "button": "View site"
+      },
+      {
+        "title": "Integrations with n8n",
+        "description": "Construction of integrations and automations connecting APIs, internal workflows and operational processes between different platforms.",
+        "link": "https://n8n.io/",
+        "image": "/portifolio/images/projects/n8n.png",
+        "alt": "n8n integration example",
+        "tags": ["n8n", "Automation", "Integration"],
+        "button": "View site"
       }
     ],
     "contactTitle": "Let's talk",
