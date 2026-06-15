@@ -45,24 +45,24 @@
     "projectsDescription": "Projetos que conectam produto, engenharia e operação: plataformas web, integrações, automações, mensageria e sistemas preparados para escala.",
     "projectCards": [
       {
-        "title": "Automação de Triagem e MR com n8n, IA e Slack",
-        "description": "Fluxo de automação criado para classificar cards helpers, direcionar demandas para o time correto e apoiar a criação automática de merge requests conforme chegavam tarefas do tipo fix ou refactor.",
+        "title": "Automação Inteligente de Triagem e Fluxo de Desenvolvimento",
+        "description": "n8n • IA • Slack • Git Workflow Automation. Automação criada para classificar demandas, integrar sistemas internos e reduzir etapas manuais no fluxo operacional e de desenvolvimento.",
         "image": "/portifolio/images/projects/n8n.png",
-        "alt": "Workflow de automação com n8n, IA e Slack",
+        "alt": "Diagrama de workflow com nós conectados representando automação, integrações e pipeline de desenvolvimento",
         "problemLabel": "Problema",
-        "problem": "Demandas helpers chegavam de forma contínua e exigiam triagem manual, comunicação no Slack e criação repetitiva de MRs para ajustes do tipo fix/refactor.",
+        "problem": "O time recebia continuamente demandas do tipo helper, correções e refatorações que precisavam ser analisadas, direcionadas e comunicadas manualmente antes do início do desenvolvimento.",
         "solutionLabel": "Solução",
-        "solution": "Criei fluxos com n8n integrando IA, Slack e repositório para classificar cards, identificar o tipo de demanda, notificar o time correto e iniciar a criação de MR automaticamente quando aplicável.",
-        "impactLabel": "Impacto",
-        "impact": "Redução de trabalho manual, melhoria no tempo de resposta, menor chance de erro na triagem e mais fluidez entre demanda, comunicação e entrega.",
+        "solution": "Desenvolvi uma automação com n8n integrada com IA e Slack para classificar demandas, identificar contexto, direcionar cada item ao time responsável e iniciar etapas relacionadas a tarefas fix ou refactor.",
+        "impactLabel": "Aprendizados",
+        "impact": "O projeto reforçou a importância de automações observáveis, resilientes e orientadas a gargalos reais, além de aplicar IA em tomada de decisão automatizada e orquestração de processos internos.",
         "tags": [
           "n8n",
           "IA",
           "Slack",
-          "Automação",
-          "Git",
-          "Merge Requests",
-          "Workflow Automation"
+          "APIs REST",
+          "Git Workflow",
+          "Automação de Processos",
+          "Arquitetura orientada a eventos"
         ]
       },
       {

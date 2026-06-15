@@ -45,24 +45,24 @@
     "projectsDescription": "Projects that connect product, engineering and operations: web platforms, integrations, automations, messaging and systems designed for scale.",
     "projectCards": [
       {
-        "title": "Triage and MR Automation with n8n, AI and Slack",
-        "description": "Automation flow built to classify helper cards, route requests to the right team and support automatic merge request creation as fix or refactor tasks arrived.",
+        "title": "Intelligent Triage and Development Workflow Automation",
+        "description": "n8n • AI • Slack • Git Workflow Automation. Automation built to classify requests, integrate internal systems and reduce manual steps across operational and development workflows.",
         "image": "/portifolio/images/projects/n8n.png",
-        "alt": "Automation workflow with n8n, AI and Slack",
+        "alt": "Workflow diagram with connected nodes representing automation, integrations and development pipeline",
         "problemLabel": "Problem",
-        "problem": "Helper requests arrived continuously and required manual triage, Slack communication and repetitive MR creation for fix/refactor adjustments.",
+        "problem": "The team continuously received helper requests, fixes and refactors that had to be analyzed, routed and communicated manually before development work could begin.",
         "solutionLabel": "Solution",
-        "solution": "I built n8n flows integrating AI, Slack and the repository to classify cards, identify the request type, notify the right team and start MR creation automatically when applicable.",
-        "impactLabel": "Impact",
-        "impact": "Reduced manual work, improved response time, lower chance of triage errors and smoother flow between request, communication and delivery.",
+        "solution": "I developed an n8n automation integrated with AI and Slack to classify requests, identify context, route each item to the responsible team and start steps related to fix or refactor tasks.",
+        "impactLabel": "Learnings",
+        "impact": "The project reinforced the importance of observable, resilient automations focused on real operational bottlenecks, while applying AI to automated decision-making and internal process orchestration.",
         "tags": [
           "n8n",
           "AI",
           "Slack",
-          "Automation",
-          "Git",
-          "Merge Requests",
-          "Workflow Automation"
+          "REST APIs",
+          "Git Workflow",
+          "Process Automation",
+          "Event-driven Architecture"
         ]
       },
       {
