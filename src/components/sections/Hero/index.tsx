@@ -202,7 +202,7 @@ export function Hero() {
               component="p"
               sx={{
                 color: "primary.main",
-                fontSize: { xs: "0.875rem", md: "1rem" },
+                fontSize: { xs: "1rem", md: "1.6rem" },
                 fontWeight: 800,
               }}
             >

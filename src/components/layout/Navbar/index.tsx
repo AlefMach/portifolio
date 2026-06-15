@@ -59,7 +59,7 @@ export default function Navbar() {
             variant="h6"
             sx={{
               color: "text.primary",
-              fontSize: { xs: "1rem", sm: "1.25rem" },
+              fontSize: { xs: "1rem", sm: "2.25rem" },
               fontWeight: 800,
               letterSpacing: 0,
               whiteSpace: "nowrap",
@@ -86,7 +86,7 @@ export default function Navbar() {
                   borderRadius: 2,
                   color: "text.secondary",
                   minWidth: "auto",
-                  px: { sm: 1, md: 1.5 },
+                  px: { sm: 1.4, md: 1.8 },
                   "&:hover": {
                     bgcolor: "action.hover",
                     color: "text.primary",
