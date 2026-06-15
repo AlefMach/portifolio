@@ -153,20 +153,20 @@
     "buildDescription": "Princípios que uso para tomar decisões técnicas com foco em produto, manutenção e evolução do sistema.",
     "buildPrinciples": [
       {
-        "title": "Monolith First",
-        "description": "Começo simples e coeso. Microsserviços só entram quando existe uma necessidade real de escala, autonomia de times ou complexidade operacional."
+        "title": "Entender o problema antes da solução",
+        "description": "Começo pelo contexto, objetivo do negócio, usuários envolvidos e limitações atuais. Antes de pensar em tecnologia, preciso entender qual problema realmente precisa ser resolvido."
       },
       {
-        "title": "Observabilidade desde o início",
-        "description": "Logs, métricas e tracing fazem parte da solução. Gosto de construir sistemas que possam ser entendidos, monitorados e evoluídos com segurança."
+        "title": "Mapear RF e RNF",
+        "description": "Organizo requisitos funcionais e não funcionais para separar o que o sistema precisa fazer de critérios como performance, segurança, escala, observabilidade e manutenção."
       },
       {
-        "title": "Automação antes de trabalho manual",
-        "description": "Busco automatizar fluxos repetitivos para reduzir atrito operacional, evitar erros manuais e liberar tempo para decisões mais importantes."
+        "title": "Decidir entre evoluir ou criar",
+        "description": "Avalio se a melhor resposta é ajustar o código existente, refatorar uma parte do sistema, integrar com algo que já existe ou criar um novo módulo. Construir do zero é a última opção, não o primeiro impulso."
       },
       {
-        "title": "IA aplicada a problemas reais",
-        "description": "Vejo IA como ferramenta prática para aumentar eficiência, classificar informações, apoiar decisões e criar experiências mais inteligentes."
+        "title": "Construir, validar e evoluir",
+        "description": "Depois da decisão técnica, implemento em etapas, valido comportamento, observo o sistema em uso e ajusto com base em evidências. O projeto termina com uma solução operável, documentada e pronta para evoluir."
       }
     ],
     "stackTitle": "Stack",

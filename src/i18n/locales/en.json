@@ -153,20 +153,20 @@
     "buildDescription": "Principles I use to make technical decisions with a focus on product, maintenance and system evolution.",
     "buildPrinciples": [
       {
-        "title": "Monolith First",
-        "description": "I start simple and cohesive. Microservices only enter when there is a real need for scale, team autonomy or operational complexity."
+        "title": "Understand the problem before the solution",
+        "description": "I start with context, business goals, users involved and current limitations. Before thinking about technology, I need to understand which problem actually needs to be solved."
       },
       {
-        "title": "Observability from the start",
-        "description": "Logs, metrics and tracing are part of the solution. I like building systems that can be understood, monitored and evolved safely."
+        "title": "Map functional and non-functional requirements",
+        "description": "I organize functional and non-functional requirements to separate what the system must do from criteria such as performance, security, scale, observability and maintainability."
       },
       {
-        "title": "Automation before manual work",
-        "description": "I look for ways to automate repetitive flows to reduce operational friction, avoid manual errors and free time for more important decisions."
+        "title": "Decide whether to evolve or create",
+        "description": "I evaluate whether the best answer is changing existing code, refactoring part of the system, integrating with something already available or creating a new module. Building from scratch is the last option, not the first impulse."
       },
       {
-        "title": "AI applied to real problems",
-        "description": "I see AI as a practical tool to increase efficiency, classify information, support decisions and create smarter experiences."
+        "title": "Build, validate and evolve",
+        "description": "After the technical decision, I implement in steps, validate behavior, observe the system in use and adjust based on evidence. The project ends with a solution that is operable, documented and ready to evolve."
       }
     ],
     "stackTitle": "Stack",

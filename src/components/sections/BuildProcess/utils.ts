@@ -14,8 +14,8 @@ const stageIcons: StageIcon[] = [
 
 export function getStageLabels(language: string) {
   return language === "pt"
-    ? ["Início", "Instrumentação", "Automação", "Deploy"]
-    : ["Start", "Instrumentation", "Automation", "Deploy"];
+    ? ["Início", "Requisitos", "Decisão", "Entrega"]
+    : ["Start", "Requirements", "Decision", "Delivery"];
 }
 
 export function getPipelineSteps(
