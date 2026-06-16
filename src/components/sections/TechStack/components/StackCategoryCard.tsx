@@ -1,4 +1,5 @@
 import { Box, Stack, Typography } from "@mui/material";
+import { motion, useReducedMotion } from "framer-motion";
 
 import { categoryIcons, fallbackStackIcon } from "../icons";
 import type { StackCategory } from "../types";
@@ -16,12 +17,15 @@ const accentBackgrounds = [
   "linear-gradient(135deg, rgba(245, 158, 11, 0.18), rgba(91, 91, 214, 0))",
 ];
 
+const signalDelays = [0.15, 0.55, 0.95, 0.35, 0.75, 1.15] as const;
+
 export function StackCategoryCard({
   category,
   index,
   toolsLabel,
 }: StackCategoryCardProps) {
   const CategoryIcon = categoryIcons[category.title] ?? fallbackStackIcon;
+  const shouldReduceMotion = Boolean(useReducedMotion());
 
   return (
     <Stack
@@ -36,7 +40,7 @@ export function StackCategoryCard({
         p: { xs: 2.5, md: 3 },
         position: "relative",
         transition:
-          "transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease",
+          "transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease",
         "&::before": {
           background: accentBackgrounds[index % accentBackgrounds.length],
           content: '""',
@@ -49,8 +53,8 @@ export function StackCategoryCard({
         },
         "&:hover": {
           borderColor: "primary.main",
-          boxShadow: "0 20px 54px rgba(15, 23, 42, 0.12)",
-          transform: "translateY(-4px)",
+          boxShadow: "0 22px 56px rgba(15, 23, 42, 0.12)",
+          transform: "perspective(900px) translateY(-4px) rotateX(1.4deg)",
         },
         "@media (prefers-reduced-motion: reduce)": {
           transition: "none",
@@ -60,6 +64,39 @@ export function StackCategoryCard({
         },
       }}
     >
+      <Box
+        aria-hidden="true"
+        sx={{
+          bgcolor: "divider",
+          height: 2,
+          left: 0,
+          overflow: "hidden",
+          position: "absolute",
+          right: 0,
+          top: 0,
+        }}
+      >
+        <Box
+          component={motion.span}
+          animate={shouldReduceMotion ? undefined : { x: ["-30%", "104%"] }}
+          transition={{
+            delay: signalDelays[index % signalDelays.length],
+            duration: 4.8,
+            ease: "easeInOut",
+            repeat: Infinity,
+            repeatDelay: 1.2,
+          }}
+          sx={{
+            background:
+              "linear-gradient(90deg, transparent, primary.main, transparent)",
+            display: "block",
+            height: "100%",
+            opacity: shouldReduceMotion ? 0 : 0.8,
+            width: "46%",
+          }}
+        />
+      </Box>
+
       <Stack
         direction="row"
         spacing={1.5}

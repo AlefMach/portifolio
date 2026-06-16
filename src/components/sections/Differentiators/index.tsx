@@ -21,6 +21,8 @@ const differentialIcons = [
   AutoAwesomeOutlinedIcon,
 ] as const;
 
+const signalDelays = [0, 0.35, 0.7, 0.2, 0.55, 0.9] as const;
+
 export function Differentiators() {
   const { t } = useTranslation();
   const shouldReduceMotion = Boolean(useReducedMotion());
@@ -85,9 +87,72 @@ export function Differentiators() {
                       flexDirection: "column",
                       gap: 2,
                       minHeight: 220,
+                      overflow: "hidden",
                       p: { xs: 2.5, md: 3 },
+                      position: "relative",
+                      transition:
+                        "transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease",
+                      "&::before": {
+                        background:
+                          "linear-gradient(135deg, rgba(0, 255, 194, 0.14), rgba(96, 165, 250, 0))",
+                        content: '""',
+                        height: 128,
+                        pointerEvents: "none",
+                        position: "absolute",
+                        right: -56,
+                        top: -64,
+                        width: 168,
+                      },
+                      "&:hover": {
+                        borderColor: "primary.main",
+                        boxShadow: "0 18px 48px rgba(15, 23, 42, 0.1)",
+                        transform: "translateY(-3px)",
+                      },
+                      "@media (prefers-reduced-motion: reduce)": {
+                        transition: "none",
+                        "&:hover": {
+                          transform: "none",
+                        },
+                      },
                     }}
                   >
+                    <Box
+                      aria-hidden="true"
+                      sx={{
+                        bgcolor: "divider",
+                        height: 2,
+                        left: 0,
+                        overflow: "hidden",
+                        position: "absolute",
+                        right: 0,
+                        top: 0,
+                      }}
+                    >
+                      <Box
+                        component={motion.span}
+                        animate={
+                          shouldReduceMotion
+                            ? undefined
+                            : { x: ["-30%", "104%"] }
+                        }
+                        transition={{
+                          delay: signalDelays[index % signalDelays.length],
+                          duration: 4.8,
+                          ease: "easeInOut",
+                          repeat: Infinity,
+                          repeatDelay: 1.2,
+                        }}
+                        sx={{
+                          background:
+                            "linear-gradient(90deg, transparent, primary.main, transparent)",
+                          display: "block",
+                          height: "100%",
+                          opacity: shouldReduceMotion ? 0 : 0.8,
+                          width: "46%",
+                        }}
+                      />
+                    </Box>
+
                     <Box
                       sx={{
                         alignItems: "center",
@@ -97,13 +162,14 @@ export function Differentiators() {
                         display: "inline-flex",
                         height: 44,
                         justifyContent: "center",
+                        position: "relative",
                         width: 44,
                       }}
                     >
                       <Icon fontSize="small" />
                     </Box>
 
-                    <Stack spacing={1}>
+                    <Stack spacing={1} sx={{ position: "relative" }}>
                       <Typography
                         component="h3"
                         sx={{ fontSize: "1.05rem", fontWeight: 800 }}

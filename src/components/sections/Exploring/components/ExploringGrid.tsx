@@ -16,8 +16,8 @@ export function ExploringGrid({ cards }: ExploringGridProps) {
         gridTemplateColumns: { xs: "1fr", md: "repeat(2, minmax(0, 1fr))" },
       }}
     >
-      {cards.map((card) => (
-        <ExploringCard key={card.title} card={card} />
+      {cards.map((card, index) => (
+        <ExploringCard key={card.title} card={card} index={index} />
       ))}
     </Box>
   );
