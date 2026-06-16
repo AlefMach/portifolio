@@ -12,7 +12,7 @@ export const lightPalette = {
   },
   background: {
     default: "#ffffff",
-    paper: "#F8F7F4",
+    paper: "#f4f7f8",
   },
   text: {
     primary: "#111827",

@@ -30,6 +30,7 @@ export function Experience() {
                 sx={{
                   border: 1,
                   borderColor: "divider",
+                  bgcolor: "background.default",
                   borderRadius: 2,
                   p: { xs: 2.5, md: 3 },
                 }}
@@ -40,18 +41,26 @@ export function Experience() {
                   sx={{
                     alignItems: { xs: "flex-start", sm: "baseline" },
                     justifyContent: "space-between",
-                    mb: 1.5,
+                    mb: 2,
                   }}
                 >
                   <Box>
+                    <Typography
+                      sx={{
+                        color: "primary.main",
+                        fontSize: "0.95rem",
+                        fontWeight: 800,
+                        letterSpacing: 0,
+                        mb: 0.5,
+                      }}
+                    >
+                      {item.company}
+                    </Typography>
                     <Typography
                       component="h3"
                       sx={{ fontSize: "1.125rem", fontWeight: 800 }}
                     >
                       {item.role}
-                    </Typography>
-                    <Typography sx={{ color: "primary.main", fontWeight: 700 }}>
-                      {item.company}
                     </Typography>
                   </Box>
 
@@ -66,9 +75,32 @@ export function Experience() {
                   </Typography>
                 </Stack>
 
-                <Typography sx={{ color: "text.secondary", lineHeight: 1.7 }}>
-                  {item.description}
-                </Typography>
+                <Box
+                  component="ul"
+                  sx={{
+                    color: "text.secondary",
+                    display: "grid",
+                    gap: 1,
+                    gridTemplateColumns: {
+                      xs: "1fr",
+                      sm: "repeat(2, minmax(0, 1fr))",
+                    },
+                    lineHeight: 1.7,
+                    listStylePosition: "outside",
+                    m: 0,
+                    pl: 2.5,
+                  }}
+                >
+                  {item.highlights.map((highlight) => (
+                    <Typography
+                      key={highlight}
+                      component="li"
+                      sx={{ color: "text.secondary", lineHeight: 1.7 }}
+                    >
+                      {highlight}
+                    </Typography>
+                  ))}
+                </Box>
               </Box>
             ))}
           </Stack>

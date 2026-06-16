@@ -18,54 +18,83 @@
   "home": {
     "title": "Home",
     "aboutTitle": "Sobre",
-    "aboutDescription": "Atuo no desenvolvimento de produtos digitais, APIs e integrações com foco em clareza técnica, confiabilidade e impacto no processo. Tenho interesse especial por arquitetura de software, IA aplicada, observabilidade e automação de rotinas que reduzem trabalho manual.",
+    "aboutDescription": "Backend Software Engineer com 5+ anos desenvolvendo software para produtos digitais, fintech, pagamentos e sistemas críticos. Atuo com foco em confiabilidade, escalabilidade e operação de ambientes 24/7.",
     "aboutFocusItems": [
-      "Full Stack",
-      "APIs",
-      "IA aplicada",
-      "Automação",
-      "Observabilidade"
+      "5+ anos desenvolvendo software",
+      "Fintech e pagamentos",
+      "Sistemas críticos 24/7",
+      "Kubernetes e cloud-native",
+      "Observabilidade e confiabilidade",
+      "IA aplicada a automações"
     ],
-    "aboutIntro": "Gosto de entrar onde produto, engenharia e operação se encontram.",
-    "aboutDetail": "Meu foco é transformar problemas ambíguos em sistemas simples de entender, fáceis de operar e preparados para evoluir. Trabalho conectando interfaces, APIs, filas, integrações e métricas para que a solução funcione bem na prática, não só no repositório.",
+    "aboutIntro": "Construo e opero software backend para ambientes onde disponibilidade, rastreabilidade e evolução técnica impactam diretamente o negócio.",
+    "aboutDetail": "Minha experiência passa por sistemas de contas, pagamentos, integrações, mensageria, deploys, QA, monitoramento e infraestrutura. Trabalho com Elixir, Kotlin, Kubernetes, cloud-native, observabilidade e automações com IA para reduzir trabalho manual e aumentar previsibilidade operacional.",
     "aboutCards": [
       {
-        "title": "Produto",
-        "description": "Construo pensando no fluxo real de uso, nas decisões que a interface precisa apoiar e no impacto para quem opera."
+        "title": "Fintech e pagamentos",
+        "description": "Experiência em contas, transferências, notificações, métodos de pagamento e integrações críticas para operação financeira."
       },
       {
-        "title": "Engenharia",
-        "description": "Organizo código, integrações e arquitetura para reduzir acoplamento, facilitar manutenção e sustentar evolução."
+        "title": "Sistemas confiáveis",
+        "description": "Desenvolvimento com atenção a escalabilidade, disponibilidade, observabilidade e operação contínua em produção."
       },
       {
-        "title": "Operação",
-        "description": "Dou atenção a logs, métricas, automações e diagnóstico para que o sistema seja observável desde cedo."
+        "title": "Automação aplicada",
+        "description": "Uso IA, n8n, LLMs e integrações para automatizar fluxos, classificar demandas e reduzir etapas manuais."
       }
     ],
     "experienceTitle": "Experiência",
-    "experienceDescription": "Trajetória recente conectando desenvolvimento de produto, integrações, automação e operação de sistemas em produção.",
+    "experienceDescription": "Histórico executivo em engenharia backend, pagamentos, integrações e operação de sistemas críticos.",
     "experienceItems": [
       {
         "company": "Swap",
-        "period": "Experiência profissional",
-        "role": "Engenharia de software e observabilidade",
-        "description": "Atuo em sistemas orientada a eventos, webhooks, workers e telemetria, dando visibilidade a filas, URLs, realms e gargalos de processamento em produção."
+        "period": "2025 - Atual",
+        "role": "Software Engineer",
+        "highlights": [
+          "Sistemas de contas e pagamentos",
+          "Escalabilidade",
+          "Disponibilidade",
+          "Operações críticas 24/7"
+        ]
+      },
+      {
+        "company": "Ghisolfi",
+        "period": "2024 - 2025",
+        "role": "Software Engineer",
+        "highlights": [
+          "Sistemas internos",
+          "Integrações",
+          "Infraestrutura",
+          "Escala para milhares de usuários"
+        ]
+      },
+      {
+        "company": "Solfácil",
+        "period": "2022 - 2023",
+        "role": "Software Engineer",
+        "highlights": [
+          "Métodos de pagamento",
+          "Backend e frontend",
+          "QA",
+          "Deploys",
+          "Monitoramento"
+        ]
       },
       {
         "company": "Alertrack",
-        "period": "Experiência profissional",
-        "role": "Desenvolvimento de plataforma conversacional",
-        "description": "Trabalhei em bots conversacionais e integrações em tempo real via WhatsApp, com foco em concorrência, webhooks, cache e automações para atendimento em escala."
-      },
-      {
-        "company": "Projetos atuais",
-        "period": "Pesquisa e aplicação",
-        "role": "IA aplicada, automação e system design",
-        "description": "Tenho aprofundado fluxos com LLMs, RAG, n8n, Slack e desenho de APIs e filas para reduzir trabalho manual e sustentar novas aplicações com clareza operacional."
+        "period": "2021 - 2022",
+        "role": "Software Engineer",
+        "highlights": [
+          "Backend e frontend",
+          "QA",
+          "Deploys",
+          "Monitoramento",
+          "Build system do zero"
+        ]
       }
     ],
-    "projectsTitle": "Projetos em destaque",
-    "projectsDescription": "Projetos que conectam produto, engenharia e operação: plataformas web, integrações, automações, mensageria e sistemas preparados para escala.",
+    "projectsTitle": "Casos de engenharia",
+    "projectsDescription": "Casos práticos em sistemas críticos, pagamentos, mensageria, observabilidade e automação com IA, conectando decisões técnicas a impacto operacional.",
     "projectCards": [
       {
         "title": "Automação Inteligente de Triagem e Fluxo de Desenvolvimento",
@@ -149,24 +178,32 @@
         "button": "Ver site"
       }
     ],
-    "buildTitle": "Como eu construo software",
-    "buildDescription": "Princípios que uso para tomar decisões técnicas com foco em produto, manutenção e evolução do sistema.",
+    "buildTitle": "Diferenciais",
+    "buildDescription": "Áreas em que concentro experiência prática para criar sistemas confiáveis, escaláveis e operáveis.",
     "buildPrinciples": [
       {
-        "title": "Entender o problema antes da solução",
-        "description": "Começo pelo contexto, objetivo do negócio, usuários envolvidos e limitações atuais. Antes de pensar em tecnologia, preciso entender qual problema realmente precisa ser resolvido."
+        "title": "High Availability",
+        "description": "Operação de sistemas críticos com foco em disponibilidade, resiliência e resposta a incidentes."
       },
       {
-        "title": "Mapear RF e RNF",
-        "description": "Organizo requisitos funcionais e não funcionais para separar o que o sistema precisa fazer de critérios como performance, segurança, escala, observabilidade e manutenção."
+        "title": "Distributed Systems",
+        "description": "APIs, filas, workers, eventos e integrações desenhadas para escala e isolamento de falhas."
       },
       {
-        "title": "Decidir entre evoluir ou criar",
-        "description": "Avalio se a melhor resposta é ajustar o código existente, refatorar uma parte do sistema, integrar com algo que já existe ou criar um novo módulo. Construir do zero é a última opção, não o primeiro impulso."
+        "title": "Payments & Fintech",
+        "description": "Experiência em contas, transferências, notificações, métodos de pagamento e fluxos financeiros."
       },
       {
-        "title": "Construir, validar e evoluir",
-        "description": "Depois da decisão técnica, implemento em etapas, valido comportamento, observo o sistema em uso e ajusto com base em evidências. O projeto termina com uma solução operável, documentada e pronta para evoluir."
+        "title": "Cloud Native",
+        "description": "Kubernetes, containers, deploys, infraestrutura e práticas alinhadas a ambientes cloud-native."
+      },
+      {
+        "title": "Observability",
+        "description": "Logs, métricas, tracing e telemetria para diagnóstico, operação e evolução baseada em evidências."
+      },
+      {
+        "title": "AI Automation",
+        "description": "Automação de processos com IA, LLMs, n8n, RAG e integrações para reduzir trabalho manual."
       }
     ],
     "stackTitle": "Stack",
@@ -218,7 +255,7 @@
     "contactDescription": "Se você precisa construir um produto, automatizar processos ou evoluir uma arquitetura com mais clareza e observabilidade, posso ajudar a transformar a ideia em uma solução prática.",
     "contactPrimaryAction": "Enviar email",
     "contactSecondaryAction": "Ver LinkedIn",
-    "contactMeta": "Brasil / remoto. Aberto a oportunidades Full Stack, Backend, automação, IA aplicada e consultoria técnica.",
+    "contactMeta": "Brasil / remoto. Aberto a oportunidades internacionais em Backend, fintech, pagamentos, sistemas distribuídos, automação e consultoria técnica.",
     "contactForm": {
       "title": "Envie uma mensagem",
       "description": "Use o formulário para compartilhar contexto, objetivos ou dúvidas técnicas. Vou receber diretamente por email.",
@@ -238,7 +275,7 @@
     }
   },
   "hero": {
-    "eyebrow": "Full Stack, IA aplicada e automação",
+    "eyebrow": "Fintech • Pagamentos • Sistemas Distribuídos • Automação com IA",
     "title": "Olá, meu nome é Alef,",
     "skills": [
       "Desenvolvedor Full Stack.",
@@ -248,12 +285,15 @@
       "Projeto sistemas observáveis.",
       "Problem Solver."
     ],
-    "description": "Desenvolvo produtos, integrações e automações com foco em resolver problemas reais, reduzir trabalho manual e criar sistemas confiáveis desde a primeira versão.",
+    "description": "Construindo sistemas resilientes para operações críticas, pagamentos e automações baseadas em IA.",
     "primaryAction": "Ver projetos",
     "secondaryAction": "Entrar em contato"
   },
   "footer": {
-    "title": "© 2026 Alef. Todos os direitos reservados."
+    "title": "© 2026 Alef Machado. Todos os direitos reservados.",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "email": "Email"
   },
   "notFound": {
     "title": "404"

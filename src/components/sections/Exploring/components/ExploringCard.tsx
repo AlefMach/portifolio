@@ -21,7 +21,7 @@ export function ExploringCard({ card }: ExploringCardProps) {
     <Stack
       spacing={2.5}
       sx={{
-        bgcolor: "background.paper",
+        bgcolor: "background.default",
         border: 1,
         borderColor: "divider",
         borderRadius: 2,

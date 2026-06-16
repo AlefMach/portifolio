@@ -18,54 +18,83 @@
   "home": {
     "title": "Home",
     "aboutTitle": "About",
-    "aboutDescription": "I work on digital products, APIs and integrations with a focus on technical clarity, reliability and process impact. I am especially interested in software architecture, applied AI, observability and automation that reduces manual work.",
+    "aboutDescription": "Backend Software Engineer with 5+ years building software for digital products, fintech, payments and critical systems. I focus on reliability, scalability and 24/7 production operations.",
     "aboutFocusItems": [
-      "Full Stack",
-      "APIs",
-      "Applied AI",
-      "Automation",
-      "Observability"
+      "5+ years building software",
+      "Fintech and payments",
+      "Critical 24/7 systems",
+      "Kubernetes and cloud-native",
+      "Observability and reliability",
+      "AI applied to automation"
     ],
-    "aboutIntro": "I like working where product, engineering and operations meet.",
-    "aboutDetail": "My focus is turning ambiguous problems into systems that are easy to understand, simple to operate and ready to evolve. I connect interfaces, APIs, queues, integrations and metrics so the solution works well in practice, not only in the repository.",
+    "aboutIntro": "I build and operate backend software for environments where availability, traceability and technical evolution directly affect the business.",
+    "aboutDetail": "My experience spans account systems, payments, integrations, messaging, deployments, QA, monitoring and infrastructure. I work with Elixir, Kotlin, Kubernetes, cloud-native practices, observability and AI automation to reduce manual work and improve operational predictability.",
     "aboutCards": [
       {
-        "title": "Product",
-        "description": "I build with the real user flow in mind, the decisions the interface needs to support and the impact on daily operations."
+        "title": "Fintech and payments",
+        "description": "Experience with accounts, transfers, notifications, payment methods and critical integrations for financial operations."
       },
       {
-        "title": "Engineering",
-        "description": "I organize code, integrations and architecture to reduce coupling, simplify maintenance and support evolution."
+        "title": "Reliable systems",
+        "description": "Development focused on scalability, availability, observability and continuous production operations."
       },
       {
-        "title": "Operations",
-        "description": "I pay attention to logs, metrics, automation and diagnosis so systems are observable from early versions."
+        "title": "Applied automation",
+        "description": "I use AI, n8n, LLMs and integrations to automate workflows, classify requests and reduce manual steps."
       }
     ],
     "experienceTitle": "Experience",
-    "experienceDescription": "Recent work connecting product development, integrations, automation and production operations.",
+    "experienceDescription": "Executive track record across backend engineering, payments, integrations and critical system operations.",
     "experienceItems": [
       {
         "company": "Swap",
-        "period": "Professional experience",
-        "role": "Software engineering and observability",
-        "description": "I worked on event-driven systems, webhooks, workers and telemetry, making queues, URLs, realms and production processing bottlenecks visible."
+        "period": "2025 - Present",
+        "role": "Software Engineer",
+        "highlights": [
+          "Account and payment systems",
+          "Scalability",
+          "Availability",
+          "Critical 24/7 operations"
+        ]
+      },
+      {
+        "company": "Ghisolfi",
+        "period": "2024 - 2025",
+        "role": "Software Engineer",
+        "highlights": [
+          "Internal systems",
+          "Integrations",
+          "Infrastructure",
+          "Scale for thousands of users"
+        ]
+      },
+      {
+        "company": "Solfácil",
+        "period": "2022 - 2023",
+        "role": "Software Engineer",
+        "highlights": [
+          "Payment methods",
+          "Backend and frontend",
+          "QA",
+          "Deployments",
+          "Monitoring"
+        ]
       },
       {
         "company": "Alertrack",
-        "period": "Professional experience",
-        "role": "Conversational platform development",
-        "description": "I worked on conversational bots and real-time WhatsApp integrations, focusing on concurrency, webhooks, cache and automation for customer service at scale."
-      },
-      {
-        "company": "Current projects",
-        "period": "Research and application",
-        "role": "Applied AI, automation and system design",
-        "description": "I have been going deeper into flows with LLMs, RAG, n8n, Slack and API and queue design to reduce manual work and support new applications with operational clarity."
+        "period": "2021 - 2022",
+        "role": "Software Engineer",
+        "highlights": [
+          "Backend and frontend",
+          "QA",
+          "Deployments",
+          "Monitoring",
+          "Build system from scratch"
+        ]
       }
     ],
-    "projectsTitle": "Featured projects",
-    "projectsDescription": "Projects that connect product, engineering and operations: web platforms, integrations, automations, messaging and systems designed for scale.",
+    "projectsTitle": "Engineering case studies",
+    "projectsDescription": "Practical cases in critical systems, payments, messaging, observability and AI automation, connecting technical decisions to operational impact.",
     "projectCards": [
       {
         "title": "Intelligent Triage and Development Workflow Automation",
@@ -149,24 +178,32 @@
         "button": "View site"
       }
     ],
-    "buildTitle": "How I build software",
-    "buildDescription": "Principles I use to make technical decisions with a focus on product, maintenance and system evolution.",
+    "buildTitle": "Differentiators",
+    "buildDescription": "Areas where I bring practical experience to create reliable, scalable and operable systems.",
     "buildPrinciples": [
       {
-        "title": "Understand the problem before the solution",
-        "description": "I start with context, business goals, users involved and current limitations. Before thinking about technology, I need to understand which problem actually needs to be solved."
+        "title": "High Availability",
+        "description": "Critical system operations focused on availability, resilience and incident response."
       },
       {
-        "title": "Map functional and non-functional requirements",
-        "description": "I organize functional and non-functional requirements to separate what the system must do from criteria such as performance, security, scale, observability and maintainability."
+        "title": "Distributed Systems",
+        "description": "APIs, queues, workers, events and integrations designed for scale and failure isolation."
       },
       {
-        "title": "Decide whether to evolve or create",
-        "description": "I evaluate whether the best answer is changing existing code, refactoring part of the system, integrating with something already available or creating a new module. Building from scratch is the last option, not the first impulse."
+        "title": "Payments & Fintech",
+        "description": "Experience with accounts, transfers, notifications, payment methods and financial workflows."
       },
       {
-        "title": "Build, validate and evolve",
-        "description": "After the technical decision, I implement in steps, validate behavior, observe the system in use and adjust based on evidence. The project ends with a solution that is operable, documented and ready to evolve."
+        "title": "Cloud Native",
+        "description": "Kubernetes, containers, deployments, infrastructure and practices aligned with cloud-native environments."
+      },
+      {
+        "title": "Observability",
+        "description": "Logs, metrics, tracing and telemetry for diagnosis, operations and evidence-based evolution."
+      },
+      {
+        "title": "AI Automation",
+        "description": "Process automation with AI, LLMs, n8n, RAG and integrations to reduce manual work."
       }
     ],
     "stackTitle": "Stack",
@@ -218,7 +255,7 @@
     "contactDescription": "If you need to build a product, automate processes or evolve an architecture with more clarity and observability, I can help turn the idea into a practical solution.",
     "contactPrimaryAction": "Send email",
     "contactSecondaryAction": "View LinkedIn",
-    "contactMeta": "Brazil / remote. Open to Full Stack, Backend, automation, applied AI and technical consulting opportunities.",
+    "contactMeta": "Brazil / remote. Open to international opportunities in Backend, fintech, payments, distributed systems, automation and technical consulting.",
     "contactForm": {
       "title": "Send a message",
       "description": "Use the form to share context, goals or technical questions. I will receive it directly by email.",
@@ -238,7 +275,7 @@
     }
   },
   "hero": {
-    "eyebrow": "Full Stack, applied AI and automation",
+    "eyebrow": "Fintech • Payments • Distributed Systems • AI Automation",
     "title": "Hi, I'm Alef,",
     "skills": [
       "Full Stack Developer.",
@@ -248,12 +285,15 @@
       "I design observable systems.",
       "Problem Solver."
     ],
-    "description": "I build products, integrations and automations focused on solving real problems, reducing manual work and creating reliable systems from the first version.",
+    "description": "I build resilient systems for critical operations, payments and AI-based automations.",
     "primaryAction": "View projects",
     "secondaryAction": "Get in touch"
   },
   "footer": {
-    "title": "© 2026 Alef. All rights reserved."
+    "title": "© 2026 Alef Machado. All rights reserved.",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "email": "Email"
   },
   "notFound": {
     "title": "404"

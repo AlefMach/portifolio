@@ -1,8 +1,8 @@
 import { Box } from "@mui/material";
 
 import { About } from "../../components/sections/About";
-import { BuildProcess } from "../../components/sections/BuildProcess";
 import { Contact } from "../../components/sections/Contact";
+import { Differentiators } from "../../components/sections/Differentiators";
 import { Experience } from "../../components/sections/Experience";
 import { Exploring } from "../../components/sections/Exploring";
 import { Hero } from "../../components/sections/Hero";
@@ -16,7 +16,7 @@ export default function Home() {
       <About />
       <Experience />
       <Projects />
-      <BuildProcess />
+      <Differentiators />
       <TechStack />
       <Exploring />
       <Contact />
