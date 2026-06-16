@@ -1,38 +1,46 @@
 import { Box, Container, Stack, useMediaQuery, useTheme } from "@mui/material";
-import { motion, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion, useScroll } from "framer-motion";
+import { useRef } from "react";
 
 import { useTranslation } from "../../../hooks/useTranslation";
 import { SectionHeading } from "../SectionHeading";
 import { ProjectsGrid } from "./components/ProjectsGrid";
-import { cardVariants, headingVariants, sectionVariants } from "./motion";
+import { headingVariants, sectionVariants } from "./motion";
 
 export function Projects() {
   const { t } = useTranslation();
   const theme = useTheme();
+  const sectionRef = useRef(null);
   const isXs = useMediaQuery(theme.breakpoints.only("xs"));
   const isSm = useMediaQuery(theme.breakpoints.only("sm"));
   const isMd = useMediaQuery(theme.breakpoints.only("md"));
+  const isMobile = isXs;
   const shouldReduceMotion = useReducedMotion();
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start 82%", "end 42%"],
+  });
   const activeSectionVariants = shouldReduceMotion
     ? undefined
     : sectionVariants;
   const activeHeadingVariants = shouldReduceMotion
     ? undefined
     : headingVariants;
-  const activeCardVariants = shouldReduceMotion ? undefined : cardVariants;
-  const cardOffset = isXs ? 0 : isSm ? 48 : isMd ? 92 : 128;
+  const cardOffset = isXs ? 34 : isSm ? 48 : isMd ? 92 : 128;
   const viewport = isXs
-    ? { amount: 0.01, margin: "0px 0px 8% 0px", once: true }
-    : { amount: 0.05, margin: "0px 0px 18% 0px", once: true };
+    ? { amount: 0.01, margin: "0px 0px 8% 0px", once: false }
+    : { amount: 0.05, margin: "0px 0px 18% 0px", once: false };
 
   return (
     <Box
       component="section"
       id="projects"
+      ref={sectionRef}
       sx={{
         bgcolor: "background.default",
         borderTop: 1,
         borderColor: "divider",
+        overflow: "hidden",
         py: { xs: 6, sm: 8, md: 10 },
       }}
     >
@@ -54,7 +62,10 @@ export function Projects() {
             <motion.div variants={activeSectionVariants}>
               <ProjectsGrid
                 cardOffset={cardOffset}
-                cardVariants={activeCardVariants}
+                isMobile={isMobile}
+                scrollProgress={
+                  shouldReduceMotion ? undefined : scrollYProgress
+                }
                 projects={t.home.projectCards}
               />
             </motion.div>
