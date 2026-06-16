@@ -6,7 +6,9 @@ import { HeroActions } from "./HeroActions";
 type HeroContentProps = {
   description: string;
   eyebrow: string;
+  onDownloadResume: () => void;
   primaryAction: string;
+  resumeAction: string;
   secondaryAction: string;
   skills: readonly string[];
   title: string;
@@ -15,7 +17,9 @@ type HeroContentProps = {
 export function HeroContent({
   description,
   eyebrow,
+  onDownloadResume,
   primaryAction,
+  resumeAction,
   secondaryAction,
   skills,
   title,
@@ -83,7 +87,9 @@ export function HeroContent({
       </Typography>
 
       <HeroActions
+        onDownloadResume={onDownloadResume}
         primaryAction={primaryAction}
+        resumeAction={resumeAction}
         secondaryAction={secondaryAction}
       />
     </Stack>

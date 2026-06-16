@@ -296,7 +296,8 @@
     ],
     "description": "Construindo sistemas resilientes para operações críticas, pagamentos e automações baseadas em IA.",
     "primaryAction": "Ver projetos",
-    "secondaryAction": "Entrar em contato"
+    "secondaryAction": "Entrar em contato",
+    "resumeAction": "Baixar resume"
   },
   "footer": {
     "title": "© 2026 Alef Machado. Todos os direitos reservados.",

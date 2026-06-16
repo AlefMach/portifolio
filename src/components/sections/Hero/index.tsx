@@ -1,11 +1,12 @@
 import { Box, Container } from "@mui/material";
 
 import { useTranslation } from "../../../hooks/useTranslation";
+import { downloadResumePdf } from "../../../utils/resumePdf";
 import { HeroContent } from "./components/HeroContent";
 import { HeroProfile } from "./components/HeroProfile";
 
 export function Hero() {
-  const { t } = useTranslation();
+  const { language, t } = useTranslation();
 
   return (
     <Box
@@ -39,7 +40,9 @@ export function Hero() {
           <HeroContent
             description={t.hero.description}
             eyebrow={t.hero.eyebrow}
+            onDownloadResume={() => downloadResumePdf(language, t)}
             primaryAction={t.hero.primaryAction}
+            resumeAction={t.hero.resumeAction}
             secondaryAction={t.hero.secondaryAction}
             skills={t.hero.skills}
             title={t.hero.title}

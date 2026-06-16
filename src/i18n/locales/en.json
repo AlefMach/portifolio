@@ -296,7 +296,8 @@
     ],
     "description": "I build resilient systems for critical operations, payments and AI-based automations.",
     "primaryAction": "View projects",
-    "secondaryAction": "Get in touch"
+    "secondaryAction": "Get in touch",
+    "resumeAction": "Download resume"
   },
   "footer": {
     "title": "© 2026 Alef Machado. All rights reserved.",
