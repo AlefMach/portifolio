@@ -1,4 +1,4 @@
-import type { CardMotionCustom, Project, ProjectCaseField } from "./types";
+import type { Project, ProjectCaseField } from "./types";
 
 export function getProjectCaseFields(project: Project): ProjectCaseField[] {
   const fields = [
@@ -23,14 +23,4 @@ export function getProjectCaseFields(project: Project): ProjectCaseField[] {
   return fields.filter((field): field is ProjectCaseField =>
     Boolean(field.label && field.text),
   );
-}
-
-export function getProjectMotionCustom(
-  index: number,
-  offset: number,
-): CardMotionCustom {
-  return {
-    direction: index % 2 === 0 ? "left" : "right",
-    offset,
-  };
 }
