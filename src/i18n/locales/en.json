@@ -191,6 +191,30 @@
         "button": "Read article"
       },
       {
+        "title": "In-Memory Cache for Elixir",
+        "description": "RememberMe • Elixir • ETS • Performance Engineering",
+        "link": "https://hex.pm/packages/remember_me",
+        "image": "/portfolio/images/projects/logo.jpg",
+        "problemLabel": "Problem",
+        "problem": "A service was receiving thousands of concurrent requests querying the exact same dataset. Despite the simplicity of the queries, the repeated database access created unnecessary load and increased application latency.",
+        "solutionLabel": "Solution",
+        "solution": "I developed RememberMe, an ETS-based in-memory caching library designed to store frequently accessed data and eliminate redundant database queries. The library was published as an open-source Hex package for reuse across projects.",
+        "impactLabel": "Impact",
+        "impact": "Reduced database load, improved response times for read-heavy workloads, and optimized resource utilization in scenarios with high levels of concurrent access.",
+        "roleLabel": "Role",
+        "role": "Identified the bottleneck, designed the caching strategy, implemented the library, published the package on Hex, and documented its usage.",
+        "tags": [
+          "Elixir",
+          "ETS",
+          "Caching",
+          "Performance",
+          "Concurrency",
+          "Open Source",
+          "Library Design"
+        ],
+        "button": "View Package"
+      },
+      {
         "title": "Conversational Bots • Alertrack",
         "description": "Conversational bot platform for customer service and real-time WhatsApp communication, connecting messages, business rules, webhooks and external automations.",
         "link": "https://alertrack.com.br/",
@@ -208,32 +232,32 @@
         "button": "View site"
       }
     ],
-    "buildTitle": "Differentiators",
-    "buildDescription": "Areas where I bring practical experience to create reliable, scalable and operable systems.",
+    "buildTitle": "Core Expertise",
+    "buildDescription": "Experience building and operating production systems with a strong focus on reliability, scalability, operational excellence, and business impact.",
     "buildPrinciples": [
       {
-        "title": "High Availability",
-        "description": "Critical system operations focused on availability, resilience and incident response."
+        "title": "High Availability & Reliability",
+        "description": "Development and operation of mission-critical systems with emphasis on resilience, fault tolerance, incident response, and service continuity."
       },
       {
         "title": "Distributed Systems",
-        "description": "APIs, queues, workers, events and integrations designed for scale and failure isolation."
+        "description": "Architecture and development of APIs, messaging systems, asynchronous processing, event-driven workflows, and integrations designed for scale and fault isolation."
       },
       {
-        "title": "Payments & Fintech",
-        "description": "Experience with accounts, transfers, notifications, payment methods and financial workflows."
+        "title": "Payments & Financial Infrastructure",
+        "description": "Experience with accounts, transfers, transaction processing, notifications, payment methods, and mission-critical financial workflows."
       },
       {
-        "title": "Cloud Native",
-        "description": "Kubernetes, containers, deployments, infrastructure and practices aligned with cloud-native environments."
+        "title": "Cloud Native & Platform Engineering",
+        "description": "Containers, Kubernetes, CI/CD, infrastructure automation, and modern operational practices for scalable and highly available environments."
       },
       {
-        "title": "Observability",
-        "description": "Logs, metrics, tracing and telemetry for diagnosis, operations and evidence-based evolution."
+        "title": "Observability & Operational Excellence",
+        "description": "Implementation of logging, metrics, tracing, alerting, and telemetry strategies to improve visibility, reliability, and operational efficiency."
       },
       {
         "title": "AI Automation",
-        "description": "Process automation with AI, LLMs, n8n, RAG and integrations to reduce manual work."
+        "description": "Design of automated workflows powered by AI, LLMs, RAG architectures, and integrations to streamline processes and reduce manual effort."
       }
     ],
     "stackTitle": "Stack",
@@ -287,7 +311,14 @@
         "title": "System Design",
         "description": "I design APIs, queues, observability and integrations with the evolution, diagnosis and operation of new applications in mind.",
         "visual": "system",
-        "items": ["APIs", "Queues", "OpenTelemetry", "Monolith First", "Events"]
+        "items": [
+          "APIs",
+          "Queues",
+          "OpenTelemetry",
+          "Monolith First",
+          "Events",
+          "Flink"
+        ]
       }
     ],
     "contactTitle": "Let's talk",

@@ -5,7 +5,6 @@ import {
 import { profileLinks } from "./profileLinks";
 
 const portfolioUrl = "https://alefmach.github.io/portfolio/#home";
-const maxResumeExperienceHighlights = 5;
 
 const labels = {
   en: {
@@ -55,7 +54,7 @@ const renderExperience = (t: TranslationDictionary) =>
             <span>${escapeHtml(item.period)}</span>
           </div>
           <p class="company">${escapeHtml(item.company)}</p>
-          ${renderList(item.highlights.slice(0, maxResumeExperienceHighlights))}
+          ${renderList(item.highlights)}
         </article>
       `,
     )
@@ -63,7 +62,6 @@ const renderExperience = (t: TranslationDictionary) =>
 
 const renderProjects = (t: TranslationDictionary) =>
   t.home.projectCards
-    .slice(0, 5)
     .map(
       (project) => `
         <article class="item compact">
@@ -110,13 +108,15 @@ export const buildResumeTemplate = (
 
       * {
         box-sizing: border-box;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
       }
 
       body {
         background: #eef1f4;
         color: #1f2933;
         font-family: Arial, Helvetica, sans-serif;
-        line-height: 1.45;
+        line-height: 1.38;
         margin: 0;
       }
 
@@ -132,11 +132,11 @@ export const buildResumeTemplate = (
       aside {
         background: #17212f;
         color: #eef4f8;
-        padding: 28px 22px;
+        padding: 20px 14px;
       }
 
       main {
-        padding: 30px 34px;
+        padding: 28px 28px;
       }
 
       h1,
@@ -167,7 +167,11 @@ export const buildResumeTemplate = (
       }
 
       section {
-        margin-top: 24px;
+        margin-top: 20px;
+      }
+
+      section:first-child {
+        margin-top: 0;
       }
 
       h2 {
@@ -217,7 +221,7 @@ export const buildResumeTemplate = (
       .pill-list {
         display: flex;
         flex-wrap: wrap;
-        gap: 7px;
+        gap: 6px;
         margin-top: 12px;
       }
 
@@ -227,30 +231,39 @@ export const buildResumeTemplate = (
         border-radius: 999px;
         color: #f8fafc;
         font-size: 10px;
+        line-height: 1.25;
+        max-width: 100%;
+        overflow-wrap: anywhere;
         padding: 5px 8px;
       }
 
       .summary {
         color: #374151;
         font-size: 12px;
-        margin-top: 12px;
+        margin-top: 9px;
       }
 
       .item {
-        break-inside: avoid;
-        margin-top: 14px;
+        break-inside: auto;
+        margin-top: 11px;
+        page-break-inside: auto;
       }
 
       .item-heading {
         align-items: baseline;
+        break-after: avoid;
         display: flex;
         gap: 12px;
         justify-content: space-between;
+        page-break-after: avoid;
+        row-gap: 2px;
       }
 
       .item h3 {
         color: #111827;
         font-size: 13px;
+        line-height: 1.2;
+        overflow-wrap: anywhere;
       }
 
       .item-heading span,
@@ -268,9 +281,9 @@ export const buildResumeTemplate = (
 
       main ul {
         display: grid;
-        gap: 3px;
+        gap: 2px;
         list-style: disc;
-        margin-top: 7px;
+        margin-top: 6px;
         padding-left: 18px;
       }
 
@@ -279,6 +292,8 @@ export const buildResumeTemplate = (
       .stack-row {
         color: #374151;
         font-size: 11px;
+        line-height: 1.34;
+        overflow-wrap: anywhere;
       }
 
       .compact p {
@@ -289,8 +304,8 @@ export const buildResumeTemplate = (
         border-bottom: 1px solid #edf1f5;
         display: grid;
         gap: 8px;
-        grid-template-columns: 104px 1fr;
-        padding: 8px 0;
+        grid-template-columns: 96px 1fr;
+        padding: 6px 0;
       }
 
       .stack-row strong {
@@ -339,7 +354,6 @@ export const buildResumeTemplate = (
           <h2>${escapeHtml(currentLabels.highlights)}</h2>
           <div class="pill-list">
             ${t.home.buildPrinciples
-              .slice(0, 6)
               .map(
                 (item) => `<span class="pill">${escapeHtml(item.title)}</span>`,
               )

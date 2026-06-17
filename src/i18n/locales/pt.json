@@ -191,6 +191,30 @@
         "button": "Ler artigo"
       },
       {
+        "title": "Cache em Memória para Redução de Carga no Banco",
+        "description": "RememberMe • Elixir • ETS • Engenharia de Performance",
+        "link": "https://hex.pm/packages/remember_me",
+        "image": "/portfolio/images/projects/logo.jpg",
+        "problemLabel": "Problema",
+        "problem": "Um serviço recebia aproximadamente 2.000 requisições concorrentes consultando o mesmo conjunto de dados. O acesso repetitivo gerava carga desnecessária no banco de dados e aumentava a latência da aplicação.",
+        "solutionLabel": "Solução",
+        "solution": "Desenvolvi a biblioteca RememberMe, uma solução de cache em memória baseada em ETS para armazenar dados frequentemente acessados e evitar consultas repetidas ao banco. O projeto foi publicado como pacote open source no Hex para reutilização em diferentes aplicações.",
+        "impactLabel": "Impacto",
+        "impact": "Redução da carga sobre o banco de dados, menor latência nas operações de leitura e melhor utilização dos recursos da aplicação em cenários com alto volume de acessos simultâneos.",
+        "roleLabel": "Papel",
+        "role": "Identifiquei o gargalo de performance, defini a estratégia de cache, implementei a biblioteca, publiquei o pacote no Hex e documentei sua utilização.",
+        "tags": [
+          "Elixir",
+          "ETS",
+          "Caching",
+          "Performance",
+          "Concorrência",
+          "Open Source",
+          "Design de Bibliotecas"
+        ],
+        "button": "Ver pacote"
+      },
+      {
         "title": "Bots Conversacionais • Alertrack",
         "description": "Plataforma de bots conversacionais para atendimento e comunicação em tempo real via WhatsApp, conectando mensagens, regras de negócio, webhooks e automações externas.",
         "link": "https://alertrack.com.br/",
@@ -208,32 +232,32 @@
         "button": "Ver site"
       }
     ],
-    "buildTitle": "Diferenciais",
-    "buildDescription": "Áreas em que concentro experiência prática para criar sistemas confiáveis, escaláveis e operáveis.",
+    "buildTitle": "Especialidades",
+    "buildDescription": "Experiência na construção e operação de sistemas em produção com foco em confiabilidade, escalabilidade, excelência operacional e impacto no negócio.",
     "buildPrinciples": [
       {
-        "title": "High Availability",
-        "description": "Operação de sistemas críticos com foco em disponibilidade, resiliência e resposta a incidentes."
+        "title": "Alta Disponibilidade & Confiabilidade",
+        "description": "Desenvolvimento e operação de sistemas críticos com foco em resiliência, tolerância a falhas, resposta a incidentes e continuidade de serviços."
       },
       {
-        "title": "Distributed Systems",
-        "description": "APIs, filas, workers, eventos e integrações desenhadas para escala e isolamento de falhas."
+        "title": "Sistemas Distribuídos",
+        "description": "Arquitetura e desenvolvimento de APIs, mensageria, processamento assíncrono, eventos e integrações projetadas para escala e isolamento de falhas."
       },
       {
-        "title": "Payments & Fintech",
-        "description": "Experiência em contas, transferências, notificações, métodos de pagamento e fluxos financeiros."
+        "title": "Pagamentos & Infraestrutura Financeira",
+        "description": "Experiência com contas, transferências, processamento de transações, notificações, métodos de pagamento e fluxos financeiros críticos."
       },
       {
-        "title": "Cloud Native",
-        "description": "Kubernetes, containers, deploys, infraestrutura e práticas alinhadas a ambientes cloud-native."
+        "title": "Cloud Native & Platform Engineering",
+        "description": "Containers, Kubernetes, CI/CD, automação de infraestrutura e práticas modernas para ambientes escaláveis e de alta disponibilidade."
       },
       {
-        "title": "Observability",
-        "description": "Logs, métricas, tracing e telemetria para diagnóstico, operação e evolução baseada em evidências."
+        "title": "Observabilidade & Excelência Operacional",
+        "description": "Implementação de logs, métricas, tracing, alertas e telemetria para aumentar a visibilidade, confiabilidade e eficiência operacional."
       },
       {
-        "title": "AI Automation",
-        "description": "Automação de processos com IA, LLMs, n8n, RAG e integrações para reduzir trabalho manual."
+        "title": "Automação com IA",
+        "description": "Criação de fluxos automatizados utilizando IA, LLMs, RAG e integrações para otimizar processos e reduzir atividades manuais."
       }
     ],
     "stackTitle": "Stack",
@@ -287,7 +311,14 @@
         "title": "System Design",
         "description": "Projeto APIs, filas, observabilidade e integrações pensando em evolução, diagnóstico e operação das novas aplicações.",
         "visual": "system",
-        "items": ["APIs", "Filas", "OpenTelemetry", "Monolith First", "Eventos"]
+        "items": [
+          "APIs",
+          "Filas",
+          "OpenTelemetry",
+          "Monolith First",
+          "Eventos",
+          "Flink"
+        ]
       }
     ],
     "contactTitle": "Vamos conversar",
